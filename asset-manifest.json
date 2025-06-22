@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/weather-assistant-frontend/static/css/main.a6589c5b.css",
-    "main.js": "/weather-assistant-frontend/static/js/main.f5e036ff.js",
+    "main.js": "/weather-assistant-frontend/static/js/main.b584531a.js",
     "static/js/453.1a05254e.chunk.js": "/weather-assistant-frontend/static/js/453.1a05254e.chunk.js",
     "index.html": "/weather-assistant-frontend/index.html",
     "main.a6589c5b.css.map": "/weather-assistant-frontend/static/css/main.a6589c5b.css.map",
-    "main.f5e036ff.js.map": "/weather-assistant-frontend/static/js/main.f5e036ff.js.map",
+    "main.b584531a.js.map": "/weather-assistant-frontend/static/js/main.b584531a.js.map",
     "453.1a05254e.chunk.js.map": "/weather-assistant-frontend/static/js/453.1a05254e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6589c5b.css",
-    "static/js/main.f5e036ff.js"
+    "static/js/main.b584531a.js"
   ]
 }
