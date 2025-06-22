@@ -48,7 +48,7 @@ function App() {
         }
 
         try {
-          const res = await fetch('https://weather-assistant-backend1.onrender.com/weather', {
+          const res = await fetch('https://weather-assistant-backend1.onrender.com/weather', { //http로 변경
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ latitude, longitude })
@@ -351,6 +351,7 @@ function App() {
               text: data.reply || '응답을 이해하지 못했어요.',
               // 백엔드가 그래프/미세먼지 데이터를 주면 그대로 할당
               graph: data.graph || null,
+              graphDate: data.graphDate || null, 
               dust: data.dust || null
             }
           ];
@@ -398,6 +399,20 @@ function App() {
     setPreviousView(view); // 현재 화면을 이전 화면으로 저장
     setView('listening');
   };
+
+  // 기존 useEffect들 아래에 이 코드를 추가하세요
+
+// 메시지가 업데이트될 때마다 스크롤을 맨 아래로
+useEffect(() => {
+  const messagesContainer = document.querySelector('.messages');
+  if (messagesContainer && messages.length > 0) {
+    // 부드러운 스크롤로 맨 아래로 이동
+    messagesContainer.scrollTo({
+      top: messagesContainer.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
+}, [messages]); // messages 배열이 변경될 때마다 실행
 
   // 컴포넌트 언마운트 시 정리
   useEffect(() => {
